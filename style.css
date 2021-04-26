@@ -7,6 +7,11 @@ html {
     font-size: 16px;
 }
 
+body {
+    max-width: 1800px; 
+    margin: auto; 
+}
+
 main { 
     display: flex; 
     flex-direction: column;
@@ -62,6 +67,7 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 400px; 
+    margin-bottom: 50px;
 }
 
 .banner {
@@ -95,15 +101,101 @@ h1 {
     animation: textappear 2s; 
 }
 
-
-
-
 /*portfolio*/
+.portfoliotext {
+    text-align: center; 
+}
+
+.portfolio {
+    width: 90%; 
+    height: 600px; 
+    margin: auto; 
+    display: grid; 
+    grid-template: 1fr 1fr/1fr 1fr 1fr; 
+    gap: 20px; 
+    margin-bottom: 40px; 
+}
+
+.proj {
+    min-height: 0; 
+    min-width: 0;
+    overflow: hidden; 
+}
+
+.proj img {
+    width: 100%; 
+    overflow: hidden; 
+}
+
+.projextext h3 {
+    opacity: 0; 
+}
+
+.proj img:hover {
+    opacity: 0.3; 
+}
+
+.projecttext h3:hover {
+    opacity: 1; 
+}
+
+
+
+.project1 {
+    grid-area: 1/1/2/2;  
+}
+
+.project2 {
+    grid-area: 1/2/2/3; 
+
+}
+
+.project3 {
+    grid-area: 1/3/2/4;   
+}
+
+.project4 {
+    grid-area: 2/1/3/2; 
+    background-color: purple;
+}
+
+.project5 {
+    grid-area: 2/2/3/3; 
+    background-color: purple;
+}
+
+.project6 {
+    grid-area: 2/3/3/4; 
+    background-color: purple;
+}
 
 
 /*about me*/
 
+.aboutme {
+    width: 70%; 
+    margin: auto; 
+}
+
+.aboutme img {
+    border-radius: 150px;
+    width: 150px; 
+    height: auto; 
+    float: left; 
+
+}
+.aboutme h2, .aboutme p {
+    text-align: center; 
+    float: right; 
+}
 
 /*contact me*/
+.contact {
+    text-align: center;
+}
 
 /*footer*/
+footer {
+    background-color: purple;
+    height: 100px;
+}
