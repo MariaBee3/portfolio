@@ -104,6 +104,8 @@ h1 {
 /*portfolio*/
 .portfoliotext {
     text-align: center; 
+    margin: 5% auto;
+    width: 70%; 
 }
 
 .portfolio {
@@ -120,6 +122,7 @@ h1 {
     min-height: 0; 
     min-width: 0;
     overflow: hidden; 
+    position: relative; 
 }
 
 .proj img {
@@ -127,22 +130,31 @@ h1 {
     overflow: hidden; 
 }
 
-.projextext h3 {
-    opacity: 0; 
+.project1 {
+    grid-area: 1/1/2/2;  
 }
 
-.proj img:hover {
-    opacity: 0.3; 
+.projecttext {
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 100%; 
+    width: 100%;  
+    opacity: 0;  
+    transition: 2s ease;
+    background-color: #FFFFFF;  
 }
 
-.projecttext h3:hover {
+.proj:hover .projecttext {
     opacity: 1; 
 }
 
-
-
-.project1 {
-    grid-area: 1/1/2/2;  
+.text {
+    color: purple; 
+    font-size: 20px; 
+    padding: 20px; 
 }
 
 .project2 {
@@ -161,7 +173,7 @@ h1 {
 
 .project5 {
     grid-area: 2/2/3/3; 
-    background-color: purple;
+    background-color: purple; 
 }
 
 .project6 {
@@ -177,16 +189,8 @@ h1 {
     margin: auto; 
 }
 
-.aboutme img {
-    border-radius: 150px;
-    width: 150px; 
-    height: auto; 
-    float: left; 
-
-}
 .aboutme h2, .aboutme p {
     text-align: center; 
-    float: right; 
 }
 
 /*contact me*/
