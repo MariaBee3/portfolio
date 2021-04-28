@@ -5,10 +5,12 @@
 html { 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+    color: #08302F;
 }
 
 body {
-    max-width: 1800px; 
+    max-width: 1800px;
+    min-width: 360px;  
     margin: auto; 
 }
 
@@ -58,7 +60,7 @@ nav a {
 }
 
 nav a:hover { 
-    color: cornflowerblue;
+    color: #D48CF8;
 }
 
 /*banner*/
@@ -67,7 +69,7 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 400px; 
-    margin-bottom: 50px;
+    margin-bottom: 2%; 
 }
 
 .banner {
@@ -101,11 +103,23 @@ h1 {
     animation: textappear 2s; 
 }
 
+@media only screen and (max-width: 750) {
+    .banner {
+        width: 70%;  
+    }
+
+    .banner h1, .banner p {
+        font-weight: 500; 
+        color: #0E8044;
+    }
+}
+
 /*portfolio*/
 .portfoliotext {
     text-align: center; 
-    margin: 5% auto;
+    margin: 2% auto;
     width: 70%; 
+
 }
 
 .portfolio {
@@ -130,10 +144,6 @@ h1 {
     overflow: hidden; 
 }
 
-.project1 {
-    grid-area: 1/1/2/2;  
-}
-
 .projecttext {
     position: absolute;
     top: 0; 
@@ -144,7 +154,7 @@ h1 {
     width: 100%;  
     opacity: 0;  
     transition: 2s ease;
-    background-color: #FFFFFF;  
+    background-color: #FFFFFF;   
 }
 
 .proj:hover .projecttext {
@@ -153,8 +163,13 @@ h1 {
 
 .text {
     color: purple; 
-    font-size: 20px; 
-    padding: 20px; 
+    font-size: 1em; 
+    padding-top: 1em;
+    padding-left: 1em;   
+}
+
+.project1 {
+    grid-area: 1/1/2/2;  
 }
 
 .project2 {
@@ -168,38 +183,120 @@ h1 {
 
 .project4 {
     grid-area: 2/1/3/2; 
-    background-color: purple;
+    background-color:#0E8044;
 }
 
 .project5 {
     grid-area: 2/2/3/3; 
-    background-color: purple; 
+    background-color: #0E8044; 
 }
 
 .project6 {
     grid-area: 2/3/3/4; 
-    background-color: purple;
+    background-color:#0E8044;
 }
 
+@media only screen and (max-width: 1000px) {
+ .portfolio {
+     grid-template: 1fr 1fr 1fr/1fr 1fr;
+     height: 700px;  
+ }   
+
+ .project3 {
+     grid-area: 2/1/3/2; 
+ }
+
+ .project4 {
+     grid-area: 2/2/3/3; 
+ }
+
+ .project5 {
+     grid-area: 3/1/4/2; 
+ }
+
+ .project6 {
+     grid-area: 3/2/4/3; 
+ }
+}; 
+
+@media only screen and (max-width: 650px) {
+    .portfolio {
+        grid-template: 1fr 1fr 1fr/1fr;
+        height: 700px;  
+    } 
+
+    .project2 {
+        grid-area: 2/1/3/2; 
+    }
+
+    .project3 { 
+        grid-area: 3/1/4/2; 
+    }
+
+    .project4 {
+        display: none; 
+    }
+
+    .project5 {
+        display: none; 
+    }
+
+    .project6 {
+        display: none; 
+    }
+};
 
 /*about me*/
 
 .aboutme {
-    width: 70%; 
-    margin: auto; 
+    width: 90%;  
+}
+
+.aboutmetext {
+    width: 60%; 
+    float: left; 
+    margin-left: 5%; 
+    
+}
+
+img.skills {
+    width: auto;
+    height: 3em;  
+    margin-left: 1em; 
+}
+
+.myimg {
+    float: left; 
+    width: 25%; 
+    height: auto; 
+    border-radius: 150px;
+    margin-left: 5%; 
+    margin-right: 5%; 
+
 }
 
 .aboutme h2, .aboutme p {
     text-align: center; 
 }
 
+
+
 /*contact me*/
 .contact {
     text-align: center;
+    width: 80%; 
+    margin: auto; 
 }
 
 /*footer*/
 footer {
-    background-color: purple;
+    background-color:#0E8044;
     height: 100px;
+}
+
+footer p {
+    padding-top: 20px; 
+    text-align: center;  
+    color: #FFFFFF; 
+    font-weight: 500;  
 }
